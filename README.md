@@ -19,15 +19,16 @@ You analyze the "feeling" behind the text — happy, sad, angry, neutral.
 
 You count how many times a given name (like Alex, Tom, or your name) shows up.
 <H3>Program:</H3>
+
 ```
 import json
 from textblob import TextBlob
 
-# Load the fake Facebook data
+Load the fake Facebook data
 with open('fake_facebook_data.json', 'r', encoding='utf-8') as f:
     fb_data = json.load(f)
 
-# Extract text
+Extract text
 texts = []
 for post in fb_data.get('posts', []):
     if 'data' in post and isinstance(post['data'], list):
@@ -37,19 +38,20 @@ for post in fb_data.get('posts', []):
     if 'title' in post:
         texts.append(post['title'])
 
-# Combine all text
+Combine all text
 full_text = " ".join(texts)
 
-# Sentiment Analysis
+Sentiment Analysis
 sentiment = TextBlob(full_text).sentiment
 print(f"Sentiment polarity: {sentiment.polarity}, Subjectivity: {sentiment.subjectivity}")
 
-# Count occurrences of the name
+Count occurrences of the name
 your_name = "Alex"
 name_count = full_text.lower().count(your_name.lower())
 print(f"Occurrences of '{your_name}': {name_count}")
 
 ```
+
 <H3>Output:</H3>
 ![image](https://github.com/user-attachments/assets/688ee718-5033-4efd-b42d-8be22590141a)
 
