@@ -3,21 +3,20 @@
 <H3>DATE: 29/04/2025 </H3>
 <H1 Align="center">Project Based Experiment<H1>
 <H3>Objective:"How can we analyze the sentiment of a given set of text data and determine how many times a specific name appears within that text?"<H3>
+ 
  The Objective of this project is:
+ 
 1. Perform Sentiment Analysis on text
-
 (Find out if the text is positive, negative, or neutral.)
 
 2. Count how many times your name appears in the text
-
 (Find out how often a specific name is mentioned.)
 
 In simple words:
 You have some text (like Facebook posts, or fake data).
-
 You analyze the "feeling" behind the text — happy, sad, angry, neutral.
-
 You count how many times a given name (like Alex, Tom, or your name) shows up.
+
 <H3>Program:</H3>
 
 ```
@@ -53,7 +52,8 @@ print(f"Occurrences of '{your_name}': {name_count}")
 ```
 
 <H3>Output:</H3>
-![image](https://github.com/user-attachments/assets/688ee718-5033-4efd-b42d-8be22590141a)
+
+![image](https://github.com/user-attachments/assets/1117f22b-b5e5-4915-ae4b-0f694e0f37d4)
 
 <H3>Inference:</H3>
 1. How to read and process JSON files
